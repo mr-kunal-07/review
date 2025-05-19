@@ -6,41 +6,47 @@ const reviews = [
         title: "Everything I need in one place",
         content: "Great booking app as you can easily book appointments, pay and rate your experience all through this platform.",
         name: "Rahul",
+        role: "Salon Owner",
         location: "Bangalore, India",
-        image: "./image1.png"
+        image: "./image1.webp"
     },
     {
         title: "Found my favorite salon",
         content: "Brilliant salon app for discovering new local businesses. Easy to book appointments online and great reminders. I found my new favorite salon on Fresha.",
         name: "Sunita",
+        role: "Salon Manager",
         location: "Delhi, India",
-        image: "./image.png"
+        image: "./image.webp"
     },
     {
         title: "Great app",
         content: "I wish everyone in the service beauty industry had this system. So easy and convenient to use. It’s the best salon booking system I've ever used.",
         name: "Raj",
+        role: "Makeup Artist",
         location: "Mumbai, India",
-        image: "./image3.png"
+        image: "./image3.webp"
     },
     {
         title: "On-the-move appointments",
         content: "Easy to use on the go. Once you're signed in, you can book, amend or cancel appointments anytime. Seamless appointment booking!",
         name: "Sarita",
+        role: "Nail Technician",
         location: "Chennai, India",
-        image: "./image6.png"
+        image: "./image6.webp"
     },
     {
         title: "Book appointments online directly",
         content: "Love to be able to book online instead of having to ring salons several times. Fresha is a game changer — top app.",
         name: "Gaurav",
+        role: "Spa Manager",
         location: "Hyderabad, India",
-        image: "./image4.png"
+        image: "./image4.webp"
     },
     {
         title: "Great to find local hairdressers",
         content: "So easy to use and great to find the best salons in my area! Fresha is a great app.",
         name: "Nalini",
+        role: "Hair Stylist",
         location: "Kolkata, India",
         image: "https://imgs.search.brave.com/IFS3Gc0k-cSv2nrjOps9t31IZZF9fx-bGkeXfZdOZLg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzg3LzgzLzI2/LzM2MF9GXzE4Nzgz/MjYyNl9aMEs1NE51/RkR6UE0xME5adzZn/V2RSWU1DNzYzeEpR/TS5qcGc"
     },
@@ -48,19 +54,22 @@ const reviews = [
         title: "Barbers in my area",
         content: "This app is great for scheduling and keeping up with my barbers appointments. The best appointment scheduling system I've used.",
         name: "Suresh",
+        role: "Barber",
         location: "Pune, India",
-        image: "./image5.png"
+        image: "./image5.webp"
     },
     {
         title: "Sleek look & feel, easy to use",
         content: "I love the slick and sleek look and feel of this booking software. It’s the best in the industry and I highly recommend it.",
         name: "Priya",
+        role: "Beauty Consultant",
         location: "Ahmedabad, India",
         image: "https://imgs.search.brave.com/vuBcrZZypB27GD44bHMp_0YVA3DeqjA3fCdFAPn0tY4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzY0LzEzLzA1/LzM2MF9GXzI2NDEz/MDUwM185ZTNIbzZu/ZGxNYWI2VlhSNjMy/ZVRQSWVQemxFemZi/ei5qcGc"
     }
 ];
 
-const ReviewCard = ({ title, content, name, location, image }) => (
+
+const ReviewCard = ({ title, content, name, role, location, image }) => (
     <div className="bg-gray-100 rounded-xl shadow-md p-6 w-[230px] md:w-[340px] lg:w-[290px] flex flex-col justify-between flex-shrink-0">
         <div>
             <div className="flex items-center mb-3 text-yellow-500">
@@ -79,11 +88,13 @@ const ReviewCard = ({ title, content, name, location, image }) => (
             />
             <div>
                 <div className="font-medium text-gray-800">{name}</div>
+                <div className="text-sm text-gray-600 italic">{role}</div>
                 <div className="text-sm text-gray-500">{location}</div>
             </div>
         </div>
     </div>
 );
+
 
 const ReviewsSection = () => {
     const scrollRef = useRef(null);
