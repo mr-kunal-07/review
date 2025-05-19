@@ -1,74 +1,77 @@
 import React, { useRef } from "react";
 
 const reviews = [
-    {
-        title: "Everything I need in one place",
-        content:
-            "Great booking app as you can easily book appointments, pay and rate your experience all through this platform.",
-        name: "Jordan",
-        location: "Cape Town, South Africa",
-        image: "https://randomuser.me/api/portraits/men/11.jpg",
-    },
-    {
-        title: "Found my favorite salon",
-        content:
-            "Brilliant salon app for discovering new local businesses. Easy to book appointments online and great reminders. I found my new favorite salon on Fresha.",
-        name: "Emily",
-        location: "New York, USA",
-        image: "https://randomuser.me/api/portraits/women/22.jpg",
-    },
-    {
-        title: "Great app",
-        content:
-            "I wish everyone in the service beauty industry had this system. So easy and convenient to use. It’s the best salon booking system I've ever used.",
-        name: "Yuri",
-        location: "Vancouver, Canada",
-        image: "https://randomuser.me/api/portraits/men/33.jpg",
-    },
-    {
-        title: "On-the-move appointments",
-        content:
-            "Easy to use on the go. Once you're signed in, you can book, amend or cancel appointments anytime. Seamless appointment booking!",
-        name: "Amanda",
-        location: "Los Angeles, USA",
-        image: "https://randomuser.me/api/portraits/women/44.jpg",
-    },
-    {
-        title: "Book appointments online directly",
-        content:
-            "Love to be able to book online instead of having to ring salons several times. Fresha is a game changer — top app.",
-        name: "Josie",
-        location: "Chicago, USA",
-        image: "https://randomuser.me/api/portraits/women/55.jpg",
-    },
-    {
-        title: "Great to find local hairdressers",
-        content:
-            "So easy to use and great to find the best salons in my area! Fresha is a great app.",
-        name: "Kevin",
-        location: "Vancouver, Canada",
-        image: "https://randomuser.me/api/portraits/men/66.jpg",
-    },
-    {
-        title: "Barbers in my area",
-        content:
-            "This app is great for scheduling and keeping up with my barbers appointments. The best appointment scheduling system I've used.",
-        name: "Nathaniel",
-        location: "London, UK",
-        image: "https://randomuser.me/api/portraits/men/77.jpg",
-    },
-    {
-        title: "Sleek look & feel, easy to use",
-        content:
-            "I love the slick and sleek look and feel of this booking software. It’s the best in the industry and I highly recommend it.",
-        name: "Sylvester",
-        location: "Melbourne, Australia",
-        image: "https://randomuser.me/api/portraits/men/88.jpg",
-    },
+    
+        {
+            title: "Everything I need in one place",
+            content:
+                "Great booking app as you can easily book appointments, pay and rate your experience all through this platform.",
+            name: "Rahul",
+            location: "Bangalore, India",
+            image: "./image1.png"
+        },
+        {
+            title: "Found my favorite salon",
+            content:
+                "Brilliant salon app for discovering new local businesses. Easy to book appointments online and great reminders. I found my new favorite salon on Fresha.",
+            name: "Sunita",
+            location: "Delhi, India",
+            image: "./image.png"
+        },
+        {
+            title: "Great app",
+            content:
+                "I wish everyone in the service beauty industry had this system. So easy and convenient to use. It’s the best salon booking system I've ever used.",
+            name: "Raj",
+            location: "Mumbai, India",
+            image: "./image3.png"
+        },
+        {
+            title: "On-the-move appointments",
+            content:
+                "Easy to use on the go. Once you're signed in, you can book, amend or cancel appointments anytime. Seamless appointment booking!",
+            name: "Sarita",
+            location: "Chennai, India",
+            image: "./image6.png"
+        },
+        {
+            title: "Book appointments online directly",
+            content:
+                "Love to be able to book online instead of having to ring salons several times. Fresha is a game changer — top app.",
+            name: "Gaurav",
+            location: "Hyderabad, India",
+            image: "./image4.png"
+        },
+        {
+            title: "Great to find local hairdressers",
+            content:
+                "So easy to use and great to find the best salons in my area! Fresha is a great app.",
+            name: "Nalini",
+            location: "Kolkata, India",
+            image: "https://imgs.search.brave.com/IFS3Gc0k-cSv2nrjOps9t31IZZF9fx-bGkeXfZdOZLg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzg3LzgzLzI2/LzM2MF9GXzE4Nzgz/MjYyNl9aMEs1NE51/RkR6UE0xME5adzZn/V2RSWU1DNzYzeEpR/TS5qcGc"
+        },
+        {
+            title: "Barbers in my area",
+            content:
+                "This app is great for scheduling and keeping up with my barbers appointments. The best appointment scheduling system I've used.",
+            name: "Suresh",
+            location: "Pune, India",
+            image: "./image5.png"
+        },
+        {
+            title: "Sleek look & feel, easy to use",
+            content:
+                "I love the slick and sleek look and feel of this booking software. It’s the best in the industry and I highly recommend it.",
+            name: "Priya",
+            location: "Ahmedabad, India",
+            image: "https://imgs.search.brave.com/vuBcrZZypB27GD44bHMp_0YVA3DeqjA3fCdFAPn0tY4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzY0LzEzLzA1/LzM2MF9GXzI2NDEz/MDUwM185ZTNIbzZu/ZGxNYWI2VlhSNjMy/ZVRQSWVQemxFemZi/ei5qcGc"
+        }
+    
+      
 ];
 
 const ReviewCard = ({ title, content, name, location, image }) => (
-    <div className="bg-gray-100 h-85 rounded-xl shadow-md p-6 w-70 flex flex-col justify-between flex-shrink-0">
+    <div className="bg-gray-100 h-85 rounded-xl shadow-md p-6 w-75 flex flex-col justify-between flex-shrink-0">
         <div>
             <div className="flex items-center mb-3 text-yellow-500">
                 {Array.from({ length: 5 }).map((_, i) => (
