@@ -1,0 +1,5 @@
+@import "tailwindcss";
+/* Add to your global stylesheet */
+::-webkit-scrollbar {
+  display: none;
+}
